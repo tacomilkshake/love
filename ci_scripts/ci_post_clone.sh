@@ -12,6 +12,12 @@ XCODE_DIR="$REPO_ROOT/platform/xcode"
 DEPS_DIR="$REPO_ROOT/love-apple-dependencies"
 ELEVATE_DIR="$REPO_ROOT/elevate-game"
 
+# 0. Initialize submodules (Xcode Cloud doesn't do this automatically for nested submodules)
+echo "[0/4] Initializing submodules..."
+cd "$REPO_ROOT"
+git submodule update --init --recursive
+echo "  ✓ Submodules initialized"
+
 # 1. Set up dependency symlinks
 echo "[1/4] Setting up dependency symlinks..."
 mkdir -p "$XCODE_DIR/shared"
@@ -19,6 +25,12 @@ ln -sf "../../../love-apple-dependencies/shared/Frameworks" "$XCODE_DIR/shared/F
 ln -sf "../../../love-apple-dependencies/iOS/libraries" "$XCODE_DIR/ios/libraries"
 mkdir -p "$XCODE_DIR/macosx"
 ln -sf "../../../love-apple-dependencies/macOS/Frameworks" "$XCODE_DIR/macosx/Frameworks"
+
+# Verify symlinks
+echo "  Verifying symlinks..."
+ls -la "$XCODE_DIR/shared/Frameworks" || echo "  WARNING: shared/Frameworks symlink broken"
+ls -la "$XCODE_DIR/ios/libraries" || echo "  WARNING: ios/libraries symlink broken"
+ls -la "$XCODE_DIR/macosx/Frameworks" || echo "  WARNING: macosx/Frameworks symlink broken"
 echo "  ✓ Symlinks created"
 
 # 2. Clone the game source
@@ -51,9 +63,17 @@ echo "  ✓ game.love created ($(du -h "$REPO_ROOT/game.love" | cut -f1))"
 # 4. Verify setup
 echo "[4/4] Verifying setup..."
 if [ -d "$XCODE_DIR/shared/Frameworks/SDL3.xcframework" ]; then
-    echo "  ✓ SDL3.xcframework linked"
+    echo "  ✓ SDL3.xcframework available"
 else
     echo "  ✗ SDL3.xcframework not found!"
+    ls -la "$DEPS_DIR/shared/Frameworks/" || echo "  Deps dir contents not available"
+    exit 1
+fi
+
+if [ -d "$XCODE_DIR/macosx/Frameworks" ]; then
+    echo "  ✓ macOS Frameworks available"
+else
+    echo "  ✗ macOS Frameworks not found!"
     exit 1
 fi
 
