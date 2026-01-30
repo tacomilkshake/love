@@ -5798,17 +5798,17 @@
 				DYLIB_CURRENT_VERSION = 9.0;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/macosx/Frameworks",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks",
 					"$(PROJECT_DIR)",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/macosx/Frameworks/freetype.framework/Headers",
-					"$(PROJECT_DIR)/macosx/Frameworks/Lua.framework/Headers",
-					"$(PROJECT_DIR)/macosx/Frameworks/SDL2.framework/Headers",
-					"$(PROJECT_DIR)/macosx/Frameworks/harfbuzz.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/freetype.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/Lua.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/SDL2.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/harfbuzz.framework/Headers",
 				);
 				INFOPLIST_FILE = "macosx/liblove-macosx.plist";
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
@@ -5834,17 +5834,17 @@
 				DYLIB_CURRENT_VERSION = 9.0;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/macosx/Frameworks",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks",
 					"$(PROJECT_DIR)",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/macosx/Frameworks/freetype.framework/Headers",
-					"$(PROJECT_DIR)/macosx/Frameworks/Lua.framework/Headers",
-					"$(PROJECT_DIR)/macosx/Frameworks/SDL2.framework/Headers",
-					"$(PROJECT_DIR)/macosx/Frameworks/harfbuzz.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/freetype.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/Lua.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/SDL2.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/harfbuzz.framework/Headers",
 				);
 				INFOPLIST_FILE = "macosx/liblove-macosx.plist";
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
@@ -5871,17 +5871,17 @@
 				DYLIB_CURRENT_VERSION = 9.0;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/macosx/Frameworks",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks",
 					"$(PROJECT_DIR)",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/macosx/Frameworks/freetype.framework/Headers",
-					"$(PROJECT_DIR)/macosx/Frameworks/Lua.framework/Headers",
-					"$(PROJECT_DIR)/macosx/Frameworks/SDL2.framework/Headers",
-					"$(PROJECT_DIR)/macosx/Frameworks/harfbuzz.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/freetype.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/Lua.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/SDL2.framework/Headers",
+					"$(PROJECT_DIR)/../../love-apple-dependencies/macOS/Frameworks/harfbuzz.framework/Headers",
 				);
 				INFOPLIST_FILE = "macosx/liblove-macosx.plist";
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
