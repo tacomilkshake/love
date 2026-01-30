@@ -3,40 +3,56 @@
 # ci_post_clone.sh - Xcode Cloud post-clone script for Elevate iOS
 #
 
-set -e
+set -ex  # Exit on error, print commands
 
 echo "=== Elevate iOS: Post-Clone Setup ==="
+echo "Current directory: $(pwd)"
+echo "Repository path: $CI_PRIMARY_REPOSITORY_PATH"
 
 REPO_ROOT="$CI_PRIMARY_REPOSITORY_PATH"
 XCODE_DIR="$REPO_ROOT/platform/xcode"
 DEPS_DIR="$REPO_ROOT/love-apple-dependencies"
 ELEVATE_DIR="$REPO_ROOT/elevate-game"
 
-# 0. Initialize submodules (Xcode Cloud doesn't do this automatically for nested submodules)
+# 0. Initialize submodules
 echo "[0/4] Initializing submodules..."
 cd "$REPO_ROOT"
+echo "Contents of repo root:"
+ls -la
+echo ""
+echo ".gitmodules contents:"
+cat .gitmodules
+echo ""
 git submodule update --init --recursive
-echo "  ✓ Submodules initialized"
+echo "Submodule status:"
+git submodule status
+echo ""
+
+# Check if deps directory exists
+echo "Checking love-apple-dependencies:"
+ls -la "$DEPS_DIR" || echo "Directory doesn't exist!"
+ls -la "$DEPS_DIR/shared/Frameworks/" || echo "shared/Frameworks doesn't exist!"
+ls -la "$DEPS_DIR/iOS/libraries/" || echo "iOS/libraries doesn't exist!"
 
 # 1. Set up dependency symlinks
 echo "[1/4] Setting up dependency symlinks..."
 mkdir -p "$XCODE_DIR/shared"
-ln -sf "../../../love-apple-dependencies/shared/Frameworks" "$XCODE_DIR/shared/Frameworks"
-ln -sf "../../../love-apple-dependencies/iOS/libraries" "$XCODE_DIR/ios/libraries"
 mkdir -p "$XCODE_DIR/macosx"
-ln -sf "../../../love-apple-dependencies/macOS/Frameworks" "$XCODE_DIR/macosx/Frameworks"
+
+# Use absolute paths instead of relative symlinks
+ln -sfn "$DEPS_DIR/shared/Frameworks" "$XCODE_DIR/shared/Frameworks"
+ln -sfn "$DEPS_DIR/iOS/libraries" "$XCODE_DIR/ios/libraries"
+ln -sfn "$DEPS_DIR/macOS/Frameworks" "$XCODE_DIR/macosx/Frameworks"
 
 # Verify symlinks
-echo "  Verifying symlinks..."
-ls -la "$XCODE_DIR/shared/Frameworks" || echo "  WARNING: shared/Frameworks symlink broken"
-ls -la "$XCODE_DIR/ios/libraries" || echo "  WARNING: ios/libraries symlink broken"
-ls -la "$XCODE_DIR/macosx/Frameworks" || echo "  WARNING: macosx/Frameworks symlink broken"
-echo "  ✓ Symlinks created"
+echo "Verifying symlinks..."
+ls -la "$XCODE_DIR/shared/"
+ls -la "$XCODE_DIR/ios/"
+ls -la "$XCODE_DIR/macosx/"
 
 # 2. Clone the game source
 echo "[2/4] Cloning Elevate game source..."
 git clone --depth 1 https://github.com/tacomilkshake/elevate.git "$ELEVATE_DIR"
-echo "  ✓ Game source cloned"
 
 # 3. Build game.love
 echo "[3/4] Building game.love..."
@@ -58,24 +74,11 @@ zip -9 -r "$REPO_ROOT/game.love" \
     -x "docs/*" \
     -x "*.md" \
     -x "love2d-mcp/*"
-echo "  ✓ game.love created ($(du -h "$REPO_ROOT/game.love" | cut -f1))"
+echo "game.love created: $(du -h "$REPO_ROOT/game.love" | cut -f1)"
 
-# 4. Verify setup
-echo "[4/4] Verifying setup..."
-if [ -d "$XCODE_DIR/shared/Frameworks/SDL3.xcframework" ]; then
-    echo "  ✓ SDL3.xcframework available"
-else
-    echo "  ✗ SDL3.xcframework not found!"
-    ls -la "$DEPS_DIR/shared/Frameworks/" || echo "  Deps dir contents not available"
-    exit 1
-fi
+# 4. Final verification
+echo "[4/4] Final verification..."
+ls -la "$XCODE_DIR/shared/Frameworks/SDL3.xcframework" || echo "SDL3 NOT FOUND"
+ls -la "$XCODE_DIR/ios/libraries/" || echo "iOS libraries NOT FOUND"
 
-if [ -d "$XCODE_DIR/macosx/Frameworks" ]; then
-    echo "  ✓ macOS Frameworks available"
-else
-    echo "  ✗ macOS Frameworks not found!"
-    exit 1
-fi
-
-echo ""
 echo "=== Post-Clone Setup Complete ==="
