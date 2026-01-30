@@ -1419,11 +1419,11 @@
 		D91C76102DE3D088001FC408 /* spirv.hpp11 */ = {isa = PBXFileReference; lastKnownFileType = text; path = spirv.hpp11; sourceTree = "<group>"; };
 		D91C76112DE3D088001FC408 /* spvUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = spvUtil.h; sourceTree = "<group>"; };
 		D91C76142DE3D0A2001FC408 /* visibility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = visibility.h; sourceTree = "<group>"; };
-		D923E7D2296B85B9002FF1B3 /* harfbuzz.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = harfbuzz.xcframework; path = ios/libraries/harfbuzz.xcframework; sourceTree = "<group>"; };
+		D923E7D2296B85B9002FF1B3 /* harfbuzz.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = harfbuzz.xcframework; path = ../../love-apple-dependencies/iOS/libraries/harfbuzz.xcframework; sourceTree = "<group>"; };
 		D93660F72D1C727C00C0EC4B /* Touch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Touch.cpp; sourceTree = "<group>"; };
 		D943E58C2A24D56000D80361 /* PhysfsIo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysfsIo.cpp; sourceTree = "<group>"; };
 		D943E58D2A24D56000D80361 /* PhysfsIo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysfsIo.h; sourceTree = "<group>"; };
-		D9596F602CBAC93800BE58C1 /* SDL3.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL3.xcframework; path = shared/Frameworks/SDL3.xcframework; sourceTree = "<group>"; };
+		D9596F602CBAC93800BE58C1 /* SDL3.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL3.xcframework; path = ../../love-apple-dependencies/shared/Frameworks/SDL3.xcframework; sourceTree = "<group>"; };
 		D9DAB9202961F0EE00C64820 /* HarfbuzzShaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarfbuzzShaper.h; sourceTree = "<group>"; };
 		D9DAB9212961F0EE00C64820 /* HarfbuzzShaper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HarfbuzzShaper.cpp; sourceTree = "<group>"; };
 		D9DAB9252961F0FF00C64820 /* GenericShaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericShaper.h; sourceTree = "<group>"; };
@@ -1977,7 +1977,7 @@
 		FA7634481E28722A0066EF9E /* StreamBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamBuffer.cpp; sourceTree = "<group>"; };
 		FA7634491E28722A0066EF9E /* StreamBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamBuffer.h; sourceTree = "<group>"; };
 		FA7DA04C1C16874A0056B200 /* wrap_Math.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wrap_Math.lua; sourceTree = "<group>"; };
-		FA7E9206277E120900C24CB2 /* theora.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = theora.xcframework; path = ios/libraries/theora.xcframework; sourceTree = "<group>"; };
+		FA7E9206277E120900C24CB2 /* theora.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = theora.xcframework; path = ../../love-apple-dependencies/iOS/libraries/theora.xcframework; sourceTree = "<group>"; };
 		FA84DE5D2778D7DB002674C6 /* SpirvIntrinsics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpirvIntrinsics.h; sourceTree = "<group>"; };
 		FA84DE602778D7F3002674C6 /* SpirvIntrinsics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpirvIntrinsics.cpp; sourceTree = "<group>"; };
 		FA84DE6427791C36002674C6 /* GraphicsReadback.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphicsReadback.cpp; sourceTree = "<group>"; };
@@ -1986,10 +1986,10 @@
 		FA84DE6A277943F6002674C6 /* GraphicsReadback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphicsReadback.cpp; sourceTree = "<group>"; };
 		FA84DE6E27795E22002674C6 /* wrap_GraphicsReadback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wrap_GraphicsReadback.h; sourceTree = "<group>"; };
 		FA84DE6F27795E22002674C6 /* wrap_GraphicsReadback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wrap_GraphicsReadback.cpp; sourceTree = "<group>"; };
-		FA84DE75277CB3D4002674C6 /* SDL2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL2.xcframework; path = ios/libraries/SDL2.xcframework; sourceTree = "<group>"; };
-		FA84DE79277D4C88002674C6 /* modplug.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = modplug.xcframework; path = ios/libraries/modplug.xcframework; sourceTree = "<group>"; };
-		FA84DE7B277E045E002674C6 /* ogg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ogg.xcframework; path = ios/libraries/ogg.xcframework; sourceTree = "<group>"; };
-		FA84DE7D277E0A43002674C6 /* vorbis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = vorbis.xcframework; path = ios/libraries/vorbis.xcframework; sourceTree = "<group>"; };
+		FA84DE75277CB3D4002674C6 /* SDL2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL2.xcframework; path = ../../love-apple-dependencies/iOS/libraries/SDL2.xcframework; sourceTree = "<group>"; };
+		FA84DE79277D4C88002674C6 /* modplug.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = modplug.xcframework; path = ../../love-apple-dependencies/iOS/libraries/modplug.xcframework; sourceTree = "<group>"; };
+		FA84DE7B277E045E002674C6 /* ogg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ogg.xcframework; path = ../../love-apple-dependencies/iOS/libraries/ogg.xcframework; sourceTree = "<group>"; };
+		FA84DE7D277E0A43002674C6 /* vorbis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = vorbis.xcframework; path = ../../love-apple-dependencies/iOS/libraries/vorbis.xcframework; sourceTree = "<group>"; };
 		FA8951A01AA2EDF300EC385A /* wrap_Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wrap_Event.cpp; sourceTree = "<group>"; };
 		FA8951A11AA2EDF300EC385A /* wrap_Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wrap_Event.h; sourceTree = "<group>"; };
 		FA91DA891F377C3900C80E33 /* deprecation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = deprecation.cpp; sourceTree = "<group>"; };
@@ -2199,8 +2199,8 @@
 		FACA06A9293EE5CD001A2557 /* Sensor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sensor.cpp; sourceTree = "<group>"; };
 		FACA06AA293EE5CD001A2557 /* Sensor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sensor.cpp; sourceTree = "<group>"; };
 		FACA06AB293EE5CD001A2557 /* wrap_Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wrap_Sensor.h; sourceTree = "<group>"; };
-		FACFB750276D7E2B0089F78D /* freetype.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = freetype.xcframework; path = ios/libraries/freetype.xcframework; sourceTree = "<group>"; };
-		FACFB752276D7F6F0089F78D /* Lua.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Lua.xcframework; path = ios/libraries/Lua.xcframework; sourceTree = "<group>"; };
+		FACFB750276D7E2B0089F78D /* freetype.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = freetype.xcframework; path = ../../love-apple-dependencies/iOS/libraries/freetype.xcframework; sourceTree = "<group>"; };
+		FACFB752276D7F6F0089F78D /* Lua.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Lua.xcframework; path = ../../love-apple-dependencies/iOS/libraries/Lua.xcframework; sourceTree = "<group>"; };
 		FAD19A151DFF8CA200D5398A /* ImageDataBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageDataBase.cpp; sourceTree = "<group>"; };
 		FAD19A161DFF8CA200D5398A /* ImageDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDataBase.h; sourceTree = "<group>"; };
 		FAD43ECB1FF312D800831BB8 /* freetype.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = freetype.framework; path = macosx/Frameworks/freetype.framework; sourceTree = "<group>"; };
@@ -5655,7 +5655,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/ios/libraries";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../love-apple-dependencies/iOS/libraries";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					LOVE_SUPPORT_COREAUDIO,
@@ -5681,7 +5681,7 @@
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/ios/libraries";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../love-apple-dependencies/iOS/libraries";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					LOVE_SUPPORT_COREAUDIO,
@@ -5707,7 +5707,7 @@
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/ios/libraries";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../love-apple-dependencies/iOS/libraries";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					LOVE_SUPPORT_COREAUDIO,
