@@ -55,6 +55,12 @@
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app may use the camera for gameplay features.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app may use the microphone for audio input.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app may access photos for saving screenshots.</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
