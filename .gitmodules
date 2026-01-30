@@ -1,0 +1,3 @@
+[submodule "love-apple-dependencies"]
+	path = love-apple-dependencies
+	url = https://github.com/tacomilkshake/love-apple-dependencies.git
